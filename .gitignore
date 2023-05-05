@@ -1,3 +1,5 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
 # Logs
 logs
 *.log
@@ -7,9 +9,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# dependencies
 node_modules
 dist
 dist-ssr
+yarn.lock
+package-lock.json
 *.local
 
 # Editor directories and files
@@ -22,3 +27,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# production
+/build
+/dist
+/dev-dist
+
+# misc
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
