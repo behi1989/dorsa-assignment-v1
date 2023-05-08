@@ -6,7 +6,7 @@ export interface ButtonProps {
   extraClass?: string
   disabled?: boolean
   isLoading?: boolean
-  spinerColor?: 'blue' | 'white' | 'black' | 'green' | 'gray'
+  // spinerColor?: 'blue' | 'white' | 'black' | 'green' | 'gray'
   spinerText?: string
   icon?: () => ReactElement
   direction?: 'ltr' | 'rtl'
@@ -19,14 +19,13 @@ const Button: FC<ButtonProps> = ({
   disabled = false,
   onClick,
   extraClass = '',
-  spinerColor = 'white',
+  // spinerColor = 'white',
   spinerText,
   isLoading = false,
   direction = 'ltr',
   icon,
   id,
   type = 'button',
-  ...props
 }) => {
   const handelOnClick = () => {
     if (typeof onClick !== 'undefined') {
