@@ -1,4 +1,4 @@
-import React, {ReactElement} from 'react'
+import {FC, ReactElement} from 'react'
 
 export interface ButtonProps {
   text: string
@@ -14,7 +14,7 @@ export interface ButtonProps {
   type?: 'submit' | 'button'
 }
 
-const Button: React.FC<ButtonProps> = ({
+const Button: FC<ButtonProps> = ({
   text,
   disabled = false,
   onClick,
