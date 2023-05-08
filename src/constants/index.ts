@@ -4,16 +4,6 @@ export const navLinks = [
     title: 'home',
     link: '/',
   },
-  {
-    id: 'about',
-    title: 'about',
-    link: '/about',
-  },
-  {
-    id: 'contactus',
-    title: 'contactus',
-    link: '/contactus',
-  },
 ]
 
 export const languages = [

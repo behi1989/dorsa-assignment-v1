@@ -2,10 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 100;
+  src: url('./assets/fonts/Roboto/Roboto-Thin.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/Roboto/Roboto-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/Roboto/Roboto-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  src: url('./assets/fonts/Roboto/Roboto-Medium.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/Roboto/Roboto-Bold.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/fonts/Roboto/Roboto-Black.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: YekanBakhPro;
+  font-style: normal;
+  font-weight: 100;
+  src: url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Thin.woff') format('woff'),
+    url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Thin.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: YekanBakhPro;
+  font-style: normal;
+  font-weight: 300;
+  src: url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Light.woff') format('woff'),
+    url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: YekanBakhPro;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Regular.woff') format('woff'),
+    url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: YekanBakhPro;
+  font-style: normal;
+  font-weight: 600;
+  src: url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-SemiBold.woff') format('woff'),
+    url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: YekanBakhPro;
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Bold.woff') format('woff'),
+    url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-Bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: YekanBakhPro;
+  font-style: normal;
+  font-weight: 800;
+  src: url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-ExtraBold.woff') format('woff'),
+    url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: YekanBakhPro;
+  font-style: normal;
+  font-weight: 900;
+  src: url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-ExtraBlack.woff') format('woff'),
+    url('./assets/fonts/YekanBakhPro/YekanBakhFaNum-ExtraBlack.woff2') format('woff2');
+}
+
 @layer base {
   *,
   body {
-    font-family: Roboto;
+    font-family: Roboto, YekanBakhPro;
     font-style: normal;
     font-weight: 400;
     margin: 0;
@@ -37,6 +135,64 @@
 
   button:focus {
     box-shadow: none;
+  }
+
+  .radio {
+    position: relative;
+    padding-right: 25px;
+    margin: 0 !important;
+    cursor: pointer;
+    font-size: 14px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+  }
+
+  .radio:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  .radio input:checked ~ .checkmark {
+    border: 1px solid #63cd7c;
+    background-color: #fff;
+  }
+
+  .radio input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+  .radio .checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #63cd7c;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 3px;
+    right: 0;
+    height: 18px;
+    width: 18px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 50%;
+  }
+
+  .checkmark:after {
+    content: '';
+    position: absolute;
+    display: none;
   }
 
   .loading {

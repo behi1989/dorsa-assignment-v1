@@ -7,6 +7,10 @@ export default {
       colors: {
         lightGray: '#e3e9f1',
         lightWhite: '#fafafa',
+        grayText: '#695C5C',
+        darkText: '#151212',
+        lightBorder: '#EBE9E9',
+        lightPurple: '#6366f1',
       },
     },
     screens: {
