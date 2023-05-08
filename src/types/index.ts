@@ -9,7 +9,6 @@ export type MetaProps = {
   max_num_pages: number
 }
 
-export type IResponseProps = {
+export interface IResponseProps extends MetaProps {
   data: IResponse[]
-  meta?: MetaProps
 }
